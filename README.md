@@ -14,19 +14,29 @@ This is a Flutter app for managing kategori barang (category of items).
 ### Screenshots
 
 - view awal
-![Screenshot 1](screenshot/kategori barang.png)
+![Screenshot 1](screenshot/kategori_barang.png)
+
+
 
 - view add data
-![Screenshot 2](screenshot/tambah data1.png)
+![Screenshot 2](screenshot/tambah_data1.png)
+
+
 
 - data tertambah
-![Screenshot 3](screenshot/data ditambah.png)
+![Screenshot 3](screenshot/data_ditambah.png)
+
+
 
 - data edit view
-![Screenshot 4](screenshot/edit kategori.png)
+![Screenshot 4](screenshot/edit_kategori.png)
+
+
 
 - data teredit
 ![Screenshot 5](screenshot/teredit.png)
+
+
 
 - data terhapus
 ![Screenshot 6](screenshot/terhapus.png)
