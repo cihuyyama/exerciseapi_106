@@ -28,7 +28,7 @@ class _EditKategoriBarangState extends State<EditKategoriBarang> {
     var formkey = GlobalKey<FormState>();
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tambah Kategori Barang'),
+        title: const Text('Edit Kategori Barang'),
       ),
       body: Form(
         key: formkey,
