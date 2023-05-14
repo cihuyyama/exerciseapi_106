@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:materiapi/controller/kategori_barang_controller.dart';
-import 'package:materiapi/model/kategori_barang_model.dart';
 import 'package:materiapi/view/kategori_barang.dart';
 
 class EditKategoriBarang extends StatefulWidget {
@@ -18,11 +17,10 @@ class EditKategoriBarang extends StatefulWidget {
 
 class _EditKategoriBarangState extends State<EditKategoriBarang> {
   final kategoriBarangController = KategoriBarangController();
-  String? nama;
-  int? id;
+  String? name;
 
-  void editKategoriBarang() async{
-    KategoriBarangModel kategoriBarang = KategoriBarangModel(nama: nama!, id: id);
+  void editKategoriBarang(String nama, int id) async{
+    await kategoriBarangController.updateKategoriBarang(id,nama);
   }
 
   @override
@@ -43,7 +41,7 @@ class _EditKategoriBarangState extends State<EditKategoriBarang> {
                 labelText: 'Nama Kategori Barang',
               ),
               onChanged: (value) {
-                nama = value;
+                name = value;
               },
               validator: (value) {
                 if (value == null || value.isEmpty) {
@@ -57,7 +55,9 @@ class _EditKategoriBarangState extends State<EditKategoriBarang> {
               onPressed: () {
                 if (formkey.currentState!.validate()) {
                   formkey.currentState!.save();
-                  editKategoriBarang();
+                  editKategoriBarang(
+                    name!,widget.id!
+                  );
                   Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
