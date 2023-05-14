@@ -4,7 +4,13 @@ import 'package:materiapi/model/kategori_barang_model.dart';
 import 'package:materiapi/view/kategori_barang.dart';
 
 class EditKategoriBarang extends StatefulWidget {
-  const EditKategoriBarang({super.key});
+  final String? nama;
+  final int? id;
+  const EditKategoriBarang({
+    Key? key,
+    this.nama,
+    this.id
+  }) : super(key: key);
 
   @override
   State<EditKategoriBarang> createState() => _EditKategoriBarangState();

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:materiapi/controller/kategori_barang_controller.dart';
 import 'package:materiapi/model/kategori_barang_model.dart';
 import 'package:materiapi/view/add_kategori_barang.dart';
+import 'package:materiapi/view/edit_kategori_barang.dart';
 
 class KategoriBarang extends StatefulWidget {
   const KategoriBarang({super.key});
@@ -53,6 +54,10 @@ class _KategoriBarangState extends State<KategoriBarang> {
                 children: <Widget>[
                   IconButton(
                     onPressed: () {
+                      EditKategoriBarang(
+                        nama: listKategoriBarang[index].nama,
+                        id: listKategoriBarang[index].id
+                      );
                     },
                     icon: const Icon(Icons.edit),
                   ),
