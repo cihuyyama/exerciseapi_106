@@ -28,6 +28,13 @@ class _KategoriBarangState extends State<KategoriBarang> {
     });
   }
 
+  void deleteKategoriBarang(int id) async {
+    await kategoriBarangController.deleteKategoriBarang(id);
+    setState(() {
+      getKategoriBarang();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,6 +58,7 @@ class _KategoriBarangState extends State<KategoriBarang> {
                   ),
                   IconButton(
                       onPressed: () {
+                        deleteKategoriBarang(listKategoriBarang[index].id);
                       },
                       icon: const Icon(Icons.delete))
                 ],
