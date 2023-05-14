@@ -54,9 +54,14 @@ class _KategoriBarangState extends State<KategoriBarang> {
                 children: <Widget>[
                   IconButton(
                     onPressed: () {
-                      EditKategoriBarang(
-                        nama: listKategoriBarang[index].nama,
-                        id: listKategoriBarang[index].id
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => EditKategoriBarang(
+                            nama: listKategoriBarang[index].nama,
+                            id: listKategoriBarang[index].id,
+                          ),
+                        )
                       );
                     },
                     icon: const Icon(Icons.edit),
